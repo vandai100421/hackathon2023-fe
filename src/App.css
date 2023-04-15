@@ -1,5 +1,10 @@
+/* html, body, #root, .App {
+  height: 100vh;
+} */
+
 .App {
-  text-align: center;
+  text-align: center; 
+  height: 100vh;
 }
 
 .App-logo {
@@ -35,4 +40,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.headerName {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 8px 0;
+  background-color: rgb(7, 193, 240);
 }

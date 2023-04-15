@@ -10,6 +10,7 @@ function App() {
       {/* <Home /> */}
       {/* <Demo /> */}
       <DrawCanvas />
+      <DrawCanvas />
     </div>
   );
 }

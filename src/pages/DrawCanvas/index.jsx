@@ -5,7 +5,6 @@ import VID from "./t1.mp4";
 
 function DrawCanvas(props) {
   const canvasRef = useRef(null);
-  const contextRef = useRef(null);
   ///
 
   const [positions, setPositions] = useState([]);
@@ -33,18 +32,16 @@ function DrawCanvas(props) {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    canvas.width = window.innerWidth * 2;
-    canvas.height = window.innerHeight * 2;
-    canvas.style.width = `${window.innerWidth}px`;
-    canvas.style.height = `${window.innerHeight}px`;
+    canvas.width = 500;
+    canvas.height = 500;
+    canvas.style.width = `${500}px`;
+    canvas.style.height = `${500}px`;
 
     const context = canvas.getContext("2d");
-    context.scale(2, 2);
+    context.scale(1, 1);
     context.lineCap = "round";
-    context.strokeStyle = "black";
     context.lineWidth = 4;
-    contextRef.current = context;
-    console.log(positions.length);
+    console.log(positions);
     if (positions.length >= 2) {
       for (let i = 0; i < positions.length; i++) {
         if (i > 0) {
@@ -58,15 +55,13 @@ function DrawCanvas(props) {
   return (
     <div>
       <canvas
-        // onMouseDown={startDrawing}
-        // onMouseUp={finishDrawing}
-        // onMouseMove={draw}
         onClick={handleOnClick}
         ref={canvasRef}
+        width={500}
+        height={500}
         style={{
           position: "absolute",
           zIndex: 999,
-          width: 500,
         }}
       />
       {/* <video id="v" controls loop width="500">

@@ -3,7 +3,8 @@ import { hookstate } from "@hookstate/core";
 
 const initValueHomeState = {
   fileNames: [],
-  fileUrls: []
+  fileUrls: [],
+  arrPositions: []
 };
 
 const homeStore = hookstate(initValueHomeState);

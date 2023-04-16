@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 
 function DrawCanvas(props) {
   const canvasRef = useRef(null);
@@ -46,7 +46,6 @@ function DrawCanvas(props) {
       drawLine(context, _postitons[_postitons.length - 1], _postitons[0]);
     }
   }, [props.positions]);
-
   return (
     <div>
       <canvas
